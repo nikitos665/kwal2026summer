@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+       fx:controller="controller.CreateRequestController" spacing="15" styleClass="dialog-root">
+
+<padding>
+    <Insets top="25" right="30" bottom="25" left="30"/>
+</padding>
+
+<Label text="Новая заявка на ремонт" styleClass="dialog-title"/>
+
+<GridPane vgap="10" hgap="15">
+    <columnConstraints>
+        <ColumnConstraints minWidth="120" prefWidth="120"/>
+        <ColumnConstraints prefWidth="300"/>
+    </columnConstraints>
+
+    <Label text="Клиент *" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="form-label"/>
+    <TextField fx:id="clientNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"
+               promptText="ФИО клиента" styleClass="form-field"/>
+
+    <Label text="Телефон *" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="form-label"/>
+    <TextField fx:id="clientPhoneField" GridPane.rowIndex="1" GridPane.columnIndex="1"
+               promptText="+7 (999) 000-00-00" styleClass="form-field"/>
+
+    <Label text="Тип устройства *" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="form-label"/>
+    <TextField fx:id="deviceTypeField" GridPane.rowIndex="2" GridPane.columnIndex="1"
+               promptText="Ноутбук, телефон, принтер..." styleClass="form-field"/>
+
+    <Label text="Модель" GridPane.rowIndex="3" GridPane.columnIndex="0" styleClass="form-label"/>
+    <TextField fx:id="deviceModelField" GridPane.rowIndex="3" GridPane.columnIndex="1"
+               promptText="Apple MacBook Pro 16" styleClass="form-field"/>
+
+    <Label text="Серийный номер" GridPane.rowIndex="4" GridPane.columnIndex="0" styleClass="form-label"/>
+    <TextField fx:id="serialNumberField" GridPane.rowIndex="4" GridPane.columnIndex="1"
+               promptText="SN123456789" styleClass="form-field"/>
+
+    <Label text="Описание проблемы *" GridPane.rowIndex="5" GridPane.columnIndex="0"
+           styleClass="form-label" GridPane.valignment="TOP"/>
+    <TextArea fx:id="problemDescriptionArea" GridPane.rowIndex="5" GridPane.columnIndex="1"
+              prefRowCount="4" wrapText="true" promptText="Что случилось с устройством..."
+              styleClass="form-area"/>
+</GridPane>
+
+<Region VBox.vgrow="ALWAYS"/>
+
+<HBox spacing="10" alignment="CENTER_RIGHT">
+    <Button text="Отмена" onAction="#cancel" styleClass="button-secondary"/>
+    <Button text="Создать заявку" onAction="#saveRequest" styleClass="button-primary"/>
+</HBox>
+</VBox>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.RequestDetailController" spacing="12" styleClass="dialog-root">
+
+    <padding>
+        <Insets top="20" right="30" bottom="20" left="30"/>
+    </padding>
+
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <Label fx:id="lblId" text="Заявка #0" styleClass="dialog-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="lblCreated" text="Создана: --" styleClass="meta-label"/>
+        <Label fx:id="lblUpdated" text="Обновлена: --" styleClass="meta-label"/>
+    </HBox>
+
+    <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <Tab text="📋 Информация">
+            <GridPane vgap="8" hgap="12" styleClass="tab-content">
+                <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+                <columnConstraints>
+                    <ColumnConstraints minWidth="130"/>
+                    <ColumnConstraints prefWidth="280"/>
+                    <ColumnConstraints minWidth="100"/>
+                    <ColumnConstraints prefWidth="200"/>
+                </columnConstraints>
+
+                <Label text="Клиент" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="form-label"/>
+                <TextField fx:id="clientNameField" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="form-field"/>
+
+                <Label text="Телефон" GridPane.rowIndex="0" GridPane.columnIndex="2" styleClass="form-label"/>
+                <TextField fx:id="clientPhoneField" GridPane.rowIndex="0" GridPane.columnIndex="3" styleClass="form-field"/>
+
+                <Label text="Тип устройства" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="form-label"/>
+                <TextField fx:id="deviceTypeField" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="form-field"/>
+
+                <Label text="Модель" GridPane.rowIndex="1" GridPane.columnIndex="2" styleClass="form-label"/>
+                <TextField fx:id="deviceModelField" GridPane.rowIndex="1" GridPane.columnIndex="3" styleClass="form-field"/>
+
+                <Label text="Серийный номер" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="form-label"/>
+                <TextField fx:id="serialNumberField" GridPane.rowIndex="2" GridPane.columnIndex="1" styleClass="form-field"/>
+
+                <Label text="Описание проблемы" GridPane.rowIndex="3" GridPane.columnIndex="0"
+                       styleClass="form-label" GridPane.valignment="TOP"/>
+                <TextArea fx:id="problemArea" GridPane.rowIndex="3" GridPane.columnIndex="1"
+                          GridPane.columnSpan="3" prefRowCount="3" wrapText="true" styleClass="form-area"/>
+            </GridPane>
+        </Tab>
+
+        <Tab text="🔧 Ремонт">
+            <GridPane vgap="10" hgap="12" styleClass="tab-content">
+                <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+                <columnConstraints>
+                    <ColumnConstraints minWidth="130"/>
+                    <ColumnConstraints prefWidth="400"/>
+                </columnConstraints>
+
+                <Label text="Статус ремонта" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="form-label"/>
+                <ComboBox fx:id="statusCombo" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="form-combo"/>
+
+                <Label text="Стоимость ремонта" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="form-label"/>
+                <TextField fx:id="costField" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                           promptText="0.00" styleClass="form-field"/>
+
+                <Label text="Заметки мастера" GridPane.rowIndex="2" GridPane.columnIndex="0"
+                       styleClass="form-label" GridPane.valignment="TOP"/>
+                <TextArea fx:id="notesArea" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                          prefRowCount="5" wrapText="true" promptText="Что было сделано, какие запчасти использованы..."
+                          styleClass="form-area"/>
+            </GridPane>
+        </Tab>
+    </TabPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button fx:id="btnClose" text="Закрыть" onAction="#closeWindow" styleClass="button-secondary"/>
+        <Button fx:id="btnSave" text="💾 Сохранить изменения" onAction="#saveChanges" styleClass="button-primary"/>
+    </HBox>
+</VBox>

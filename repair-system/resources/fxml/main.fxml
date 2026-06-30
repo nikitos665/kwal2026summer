@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+             fx:controller="controller.MainController" styleClass="main-root">
+
+<left>
+    <VBox spacing="10" styleClass="sidebar" prefWidth="220">
+        <padding>
+            <Insets top="20" right="15" bottom="20" left="15"/>
+        </padding>
+
+        <Label text="🔧 Ремонтная" styleClass="sidebar-title"/>
+        <Label text="мастерская" styleClass="sidebar-subtitle"/>
+
+        <Region prefHeight="30"/>
+
+        <Button fx:id="btnNewRequest" text="➕ Новая заявка"
+                onAction="#showNewRequest" styleClass="sidebar-button, button-primary"/>
+
+        <Button fx:id="btnRequests" text="📋 Все заявки"
+                onAction="#showRequestList" styleClass="sidebar-button"/>
+
+        <Region VBox.vgrow="ALWAYS"/>
+
+        <Button fx:id="btnExit" text="🚪 Выход"
+                onAction="#exitApp" styleClass="sidebar-button, button-danger"/>
+    </VBox>
+</left>
+
+<center>
+    <StackPane fx:id="contentPane" styleClass="content-area"/>
+</center>
+</BorderPane>

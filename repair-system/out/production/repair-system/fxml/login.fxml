@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.LoginController" spacing="15" alignment="CENTER"
+      styleClass="login-root" prefWidth="420" prefHeight="520">
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <Label text="🔧 Ремонтная мастерская" styleClass="login-title"/>
+    <Label text="Вход в систему" styleClass="login-subtitle"/>
+
+    <Region prefHeight="20"/>
+
+    <TextField fx:id="loginField" promptText="Логин" styleClass="form-field"/>
+    <PasswordField fx:id="passwordField" promptText="Пароль" styleClass="form-field"/>
+
+    <Button text="Войти" onAction="#login" styleClass="button-primary" prefWidth="340" prefHeight="45"/>
+
+    <Region prefHeight="10"/>
+
+    <Button text="Cоздать Аккаунт" onAction="#showRegister"
+            styleClass="button-secondary" prefWidth="340"/>
+
+    <VBox fx:id="registerBox" spacing="10" visible="false" alignment="CENTER">
+        <Region prefHeight="10"/>
+        <Label text="Регистрация клиента" styleClass="login-subtitle"/>
+        <TextField fx:id="regLoginField" promptText="Придумайте логин" styleClass="form-field"/>
+        <PasswordField fx:id="regPasswordField" promptText="Придумайте пароль" styleClass="form-field"/>
+        <TextField fx:id="regNameField" promptText="Ваше имя" styleClass="form-field"/>
+        <TextField fx:id="regPhoneField" promptText="Телефон" styleClass="form-field"/>
+        <Button text="Создать аккаунт" onAction="#register"
+                styleClass="button-primary" prefWidth="340" prefHeight="40"/>
+    </VBox>
+
+    <Label text="Мастер: логин master, пароль master"
+           styleClass="hint-label" wrapText="true" alignment="CENTER"/>
+</VBox>

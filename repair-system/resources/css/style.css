@@ -1,0 +1,292 @@
+/* === Основные цвета === */
+.root {
+    -fx-primary: #2563eb;
+    -fx-primary-dark: #1d4ed8;
+    -fx-secondary: #64748b;
+    -fx-success: #10b981;
+    -fx-warning: #f59e0b;
+    -fx-danger: #ef4444;
+    -fx-bg: #f1f5f9;
+    -fx-card: #ffffff;
+    -fx-text: #1e293b;
+    -fx-text-light: #64748b;
+    -fx-border: #e2e8f0;
+}
+
+/* === Главное окно === */
+.main-root {
+    -fx-background-color: -fx-bg;
+}
+
+/* === Сайдбар === */
+.sidebar {
+    -fx-background-color: #1e293b;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 2, 0);
+}
+
+.sidebar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-subtitle {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 13px;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #cbd5e1;
+    -fx-font-size: 14px;
+    -fx-padding: 12 15;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+    -fx-pref-width: 190;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #334155;
+    -fx-text-fill: white;
+}
+
+.button-primary {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button-primary:hover {
+    -fx-background-color: -fx-primary-dark;
+}
+
+.button-danger {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-danger;
+}
+
+.button-danger:hover {
+    -fx-background-color: rgba(239, 68, 68, 0.15);
+}
+
+.button-secondary {
+    -fx-background-color: -fx-card;
+    -fx-text-fill: -fx-text;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+
+.button-secondary:hover {
+    -fx-background-color: -fx-bg;
+}
+
+/* === Контент === */
+.content-area {
+    -fx-background-color: -fx-bg;
+}
+
+.content-panel {
+    -fx-background-color: -fx-bg;
+}
+
+.page-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text;
+}
+
+/* === Таблица === */
+.modern-table {
+    -fx-background-color: -fx-card;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: -fx-border;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.04), 8, 0, 0, 2);
+}
+
+.modern-table .column-header {
+    -fx-background-color: #f8fafc;
+    -fx-padding: 12 15;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-light;
+    -fx-border-color: transparent -fx-border transparent transparent;
+}
+
+.modern-table .column-header:last-visible {
+    -fx-border-color: transparent;
+}
+
+.modern-table .table-row-cell {
+    -fx-background-color: -fx-card;
+    -fx-border-color: transparent -fx-border -fx-border transparent;
+    -fx-padding: 8 0;
+}
+
+.modern-table .table-row-cell:hover {
+    -fx-background-color: #f8fafc;
+}
+
+.modern-table .table-row-cell:selected {
+    -fx-background-color: #eff6ff;
+}
+
+.modern-table .table-cell {
+    -fx-padding: 10 15;
+    -fx-text-fill: -fx-text;
+    -fx-font-size: 13px;
+}
+
+/* === Статусы в таблице === */
+.status-new {
+    -fx-text-fill: -fx-primary;
+    -fx-font-weight: bold;
+    -fx-padding: 4 10;
+    -fx-background-radius: 12;
+    -fx-background-color: #dbeafe;
+}
+
+.status-progress {
+    -fx-text-fill: #d97706;
+    -fx-font-weight: bold;
+    -fx-padding: 4 10;
+    -fx-background-radius: 12;
+    -fx-background-color: #fef3c7;
+}
+
+.status-ready {
+    -fx-text-fill: -fx-success;
+    -fx-font-weight: bold;
+    -fx-padding: 4 10;
+    -fx-background-radius: 12;
+    -fx-background-color: #d1fae5;
+}
+
+.status-cancelled {
+    -fx-text-fill: -fx-danger;
+    -fx-font-weight: bold;
+    -fx-padding: 4 10;
+    -fx-background-radius: 12;
+    -fx-background-color: #fee2e2;
+}
+
+/* === Поиск === */
+.search-field {
+    -fx-background-color: -fx-card;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8 12;
+    -fx-font-size: 13px;
+}
+
+/* === Диалоги === */
+.dialog-root {
+    -fx-background-color: -fx-card;
+    -fx-min-width: 550;
+}
+
+.dialog-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text;
+}
+
+.meta-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: -fx-text-light;
+}
+
+.tab-content {
+    -fx-background-color: -fx-card;
+}
+
+/* === Формы === */
+.form-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: -fx-text-light;
+    -fx-font-weight: bold;
+}
+
+.form-field {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 10;
+    -fx-font-size: 13px;
+}
+
+.form-field:focused {
+    -fx-border-color: -fx-primary;
+    -fx-background-color: -fx-card;
+}
+
+.form-area {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 10;
+    -fx-font-size: 13px;
+    -fx-wrap-text: true;
+}
+
+.form-area:focused {
+    -fx-border-color: -fx-primary;
+    -fx-background-color: -fx-card;
+}
+
+.form-combo {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 4 8;
+}
+
+.status-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: -fx-text-light;
+}
+
+/* === Скролл === */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 8;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #cbd5e1;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #94a3b8;
+}
+/* === Логин === */
+.login-root {
+    -fx-background-color: #1e293b;
+    -fx-alignment: center;
+}
+
+.login-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.login-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #94a3b8;
+}
+
+.hint-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #64748b;
+    -fx-padding: 20 0 0 0;
+}
